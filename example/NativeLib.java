@@ -60,15 +60,15 @@ public final class NativeLib {
 		}
 		if (in == null) {
 			filename = name + ".dll";
-			in = example.class.getClassLoader().getResourceAsStream(Path + filename);
+			in = NativeLib.class.getClassLoader().getResourceAsStream(Path + filename);
 		}
 		if (in == null) {
 			filename = "lib" + name + ".dll";
-			in = example.class.getClassLoader().getResourceAsStream(Path + filename);
+			in = NativeLib.class.getClassLoader().getResourceAsStream(Path + filename);
 		}
 		if (in == null) {
 			filename = "lib" + name + ".dylib";
-			in = example.class.getClassLoader().getResourceAsStream(Path + filename);
+			in = NativeLib.class.getClassLoader().getResourceAsStream(Path + filename);
 		}
 		if (in == null) {
 			throw new RuntimeException(
