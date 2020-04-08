@@ -9,7 +9,7 @@ public final class NativeLib {
 
 	/* Statically load the library which contains all native functions used in here */
 	static private boolean isNativeInited = false;
-	static String name = "example_swig";
+	static String name = "example";
 
 	public static String getPath() {
 		final String prefix = "NATIVE";
@@ -31,7 +31,8 @@ public final class NativeLib {
 		os = os.replace(' ', '_');
 		arch = arch.replace(' ', '_');
 
-		return prefix + "/" + os + "/" + arch + "/";
+		//return prefix + "/" + os + "/" + arch + "/";
+		return "./";
 	}
 
 	public static void nativeInit() {
